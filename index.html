@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hilo">
+<head>
+    <meta charset="UTF-8">
+    <title>TAG HILO</title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="HiloCtlr">
+    <md-content>
+        <md-toolbar class="md-warn md-hue-2">
+          <div class="md-toolbar-tools">
+            <h2>
+              <span>TAG</span>
+            </h2>
+            <span flex></span>
+          </div>
+        </md-toolbar>
+        <section layout="row" layout-padding layout-align="center center">
+                <img src="img/cards/7_of_spades.png" alt="" width="20%">
+                <img src="img/cards/back.png" id="firstCard" alt="" width="20%">
+                <img src="img/cards/back.png" id="secondCard" alt="" width="20%">
+        </section>
+        <section layout="row" layout-padding layout-align="center center">
+            <md-button class="md-raised md-primary" ng-click="guess(1)" ng-disabled="isDisabled">HIGH</md-button>
+            <md-button class="md-raised md-warn" ng-click="guess(0)" ng-disabled="isDisabled">LOW</md-button>
+            <md-button class="md-raised" ng-click="reset()" ng-disabled="isDisabled">RESET</md-button>
+        </section>
+        <section layout="row" layout-padding layout-align="center center">
+            <md-button class="md-fab md-warn" aria-label="Timer">
+                 {{ counter }}
+             </md-button>
+        </section>
+    </md-content>
+</body>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+<script src="bower_components/svg-morpheus/compile/minified/svg-morpheus.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="js/app.js"></script>
+</html>
